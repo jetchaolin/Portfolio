@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Desenvolvimento Web, HTML, CSS e JS">
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="author" content="João">
+    <title>Portifolio</title>
+  </head>
+  <!-- TODO: i18n !!!!!!!!!!!-->
+  <body>
+    <div>
+      <header>
+        <nav>
+          <h1>Portifolio</h1>
+          <ul>
+            <li><a href="about.html">Sobre mim</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="education.html">Formação</a></li>
+            <li><a href="projects.html">Projetos</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <h1>
+          Olá, meu nome é João Victor e construo páginas web
+        </h1>        
+        <div>
+          <p>
+            Eu estudo programação com foco em <strong>Ruby</strong> e <strong>Ruby on Rails</strong> para o <strong>back-end</strong>.<br> 
+            Além de <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>, <strong>React</strong> e <strong>Tailwind CSS</strong> para o <strong>front-end</strong>.
+          </p>
+        </div>
+        <div class="skills">
+          <h1>Skills</h1>
+          <ul>
+            <li>Ruby</li>
+            <li>Ruby on Rails</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="links">
+          <a href="https://github.com/jetchaolin" target="_blank">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/joão-victor-de-oliveira-ramos/" target="_blank">
+            LinkedIn
+          </a>
+          <a href="./assets/João Ramos CV 2024.pdf" target="_blank">
+            Curriculo
+          </a>      
+        </div>
+      </section>
+      <section>
+        <h1>Sobre mim</h1>
+        <div class="cards-collection">
+          <p class="card">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas
+            odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+            ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+            augue ut aliquet.
+          </p>
+          <p>
+            Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem
+            quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam
+            Lorem, sagittis nec, purus. Etiam commodo dui eget erat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+      </section>
+      <div>
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Ouvir música</li>
+          <li>Jogar jogos</li>
+          <li>Assistir séries</li>
+          <li>Assistir jogos</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Projetos</h2>
+        <div>
+          <h3>Jogo da velha - React</h3>
+          <img src="https://via.placeholder.com/150" style="width: 500px; height: 300px" />
+          <p>
+            Lorem ipsum dolor sit amet.
+          </p>
+          <a href="https://github.com/jetchaolin/tic-tac-toe" target="_blank">
+            <button>Repositório</button>
+          </a>
+          <a href="https://github.com/jetchaolin/tic-tac-toe" target="_blank">
+            <button>Ver demo</button>
+          </a>
+        </div>
+        <div>
+          <h3>Lista de tarefas - Ruby on rails</h3>
+          <img src="https://via.placeholder.com/150" style="width: 500px; height: 300px" />
+          <p>
+            Lorem ipsum dolor sit amet.
+          </p>
+          <a href="https://github.com/jetchaolin/task_list" target="_blank">
+            <button>Repositório</button>
+          </a>
+          <a href="https://github.com/jetchaolin/task_list" target="_blank">
+            <button>Ver demo</button>
+          </a>
+        </div>
+        <div>
+          <h3>Blog - React on Rails</h3>
+          <img src="https://via.placeholder.com/150" style="width: 500px; height: 300px" />
+          <p>
+            Lorem ipsum dolor sit amet.
+          </p>
+          <a href="https://github.com/jetchaolin/rails_react_app" target="_blank">
+            <button>Repositório</button>
+          </a>
+          <a href="https://github.com/jetchaolin/rails_react_app" target="_blank">
+            <button>Ver demo</button>
+          </a>
+        </div>
+        <div>
+          <h3>Short News - Tailwind on Rails</h3>
+          <img src="https://via.placeholder.com/150" style="width: 500px; height: 300px" />
+          <p>
+            Lorem ipsum dolor sit amet.
+          </p>
+          <a href="https://github.com/jetchaolin/short-news" target="_blank">
+            <button>Repositório</button>
+          </a>
+          <a href="https://github.com/jetchaolin/short-news" target="_blank">
+            <button>Ver demo</button>
+          </a>
+        </div> 
+      </div>
+      <div>
+        <h2>Contato</h2>
+        <p>Quer entrar em contato comigo?<br> Preencha o formulário abaixo.</p>
+        <form>
+          <div>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="user_name" />
+          </div>
+          <div>
+            <label for="mail">E-mail</label>
+            <input type="email" id="mail" name="user_email" />
+          </div>
+          <div>
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" name="user_subject" />
+          </div>
+          <div>
+            <label for="msg">Mensagem</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </div>
+          <div class="button">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+      <footer>
+        <p>
+          Desenvolvido por João Victor de Oliveira Ramos - 2024
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
+
