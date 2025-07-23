@@ -21,6 +21,20 @@ menuToggle.addEventListener("click", () => {
   }
 });
 
+function verificarVisibilidade() {
+  document.querySelectorAll(".card").forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const estaVisivel = (
+      rect.top <= window.innerHeight * 0.9 && // 90% da viewport
+      rect.bottom >= 0
+    );
+    if (estaVisivel) el.classList.add("ativo");
+  });
+}
+
+window.addEventListener("scroll", verificarVisibilidade);
+window.addEventListener("load", verificarVisibilidade);
+
 // function toggleMenu() {
 //   const isExpanded = menuToggle.getAttribute("aria-expanded")
 //   console.log("oi");
