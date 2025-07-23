@@ -8,8 +8,8 @@ menuToggle.addEventListener("click", () => {
   // Atualiza ARIA e estado visual
   menuToggle.setAttribute("aria-expanded", !isExpanded);
   menu.setAttribute("aria-hidden", isExpanded);
-  menu.style.display = "flex";
-  
+  menu.style.display = "flex"; 
+
   // Fecha o menu ao pressionar "Esc"
   if (!isExpanded) {
     document.addEventListener("keydown", (e) => {
@@ -21,19 +21,10 @@ menuToggle.addEventListener("click", () => {
   }
 });
 
-function verificarVisibilidade() {
-  document.querySelectorAll(".card").forEach(el => {
-    const rect = el.getBoundingClientRect();
-    const estaVisivel = (
-      rect.top <= window.innerHeight * 0.9 && // 90% da viewport
-      rect.bottom >= 0
-    );
-    if (estaVisivel) el.classList.add("ativo");
-  });
+function closeMenu() {
+  menu.style.display = "none";
 }
 
-window.addEventListener("scroll", verificarVisibilidade);
-window.addEventListener("load", verificarVisibilidade);
 
 // function toggleMenu() {
 //   const isExpanded = menuToggle.getAttribute("aria-expanded")

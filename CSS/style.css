@@ -505,10 +505,21 @@ footer p {
   display: none;
 }
 
+.close {
+  display: none;
+}
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
   /* nav ul {
     display: none;
   } */
+
+  .close {
+    font-size: large;
+    display: block;
+    color:#ef4444;
+  }
+
   .menu {
     display: flex;
     flex-direction: column;
