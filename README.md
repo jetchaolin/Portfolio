@@ -1,6 +1,6 @@
 # Portfolio
 
-## **Curso Mais Prati - Exercício 4 - Portfolio - Bonus: Git Pages**
+## **Curso Mais Prati - Exercício 4 - Portfolio - Bônus: Git Pages**
 
 ## **Pré-requisitos**
 
@@ -9,7 +9,7 @@
 
 ## **MODO DE INSTALAÇÃO**
 
-#### Navegue até a aba de extensões do seu VS Code ou IDE e instale o Live Server e ou Live Preview.
+
 
 ## **Baixe o repositório com os exercícios**
 
@@ -20,6 +20,10 @@ git clone https://github.com/jetchaolin/Portifolio.git # Https
 
 git clone git@github.com:jetchaolin/Portifolio.git # Ssh
 ```
+
+* Navegue até a aba de extensões do seu VS Code ou IDE e instale o Live Server e ou Live Preview.
+* Cique com o botão direito no arquivo index.js e selecione a opção "Open with Live Server" ou "Open with Live Preview".
+
 
 # **Imporatante**
 * Os links para a demonstração dos projetos podem não funcionar na IDEA.
