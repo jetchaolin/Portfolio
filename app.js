@@ -21,6 +21,12 @@ menuToggle.addEventListener("click", () => {
   }
 });
 
+// Adiciona evento de clique em todos os links do menu
+const menuLinks = menu.querySelectorAll('a');
+menuLinks.forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
 function closeMenu() {
   menu.style.display = "none";
 }
@@ -40,17 +46,10 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
 
 window.addEventListener('scroll', function() {
   const goUpButton = document.querySelector('.go-up');
-  // Mostrar o botão após rolar 500px para baixo (ajuste conforme necessário)
+  // Mostrar o botão após rolar 800px para baixo
   if (window.scrollY > 800) {
     goUpButton.style.display = 'flex'; // ou 'block' dependendo do seu CSS
   } else {
     goUpButton.style.display = 'none';
   }
 });
-
-
-// function toggleMenu() {
-//   const isExpanded = menuToggle.getAttribute("aria-expanded")
-//   console.log("oi");
-//   menu.setAttribute("aria-hidden", isExpanded);
-// }
