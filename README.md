@@ -25,7 +25,7 @@ git clone git@github.com:jetchaolin/Portifolio.git # Ssh
 * Cique com o botão direito no arquivo index.js e selecione a opção "Open with Live Server" ou "Open with Live Preview".
 
 
-# **Imporatante**
-* Os links para a demonstração dos projetos podem não funcionar na IDEA.
+# **Importante**
+* Os links para a demonstração dos projetos podem não funcionar na IDE.
 * Para visualizar os projetos, copie a url do preview e cole no seu navegador.
 * Você pode também acessar o git pages através do [Link](https://jetchaolin.github.io/Portifolio/)
