@@ -1,6 +1,6 @@
 # Portfolio
 
-## **Curso Mais Prati - Exercício 4 - Portifolio - Bonus: Git Pages**
+## **Curso Mais Prati - Exercício 4 - Portfolio - Bonus: Git Pages**
 
 ## **Pré-requisitos**
 
