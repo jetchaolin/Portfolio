@@ -598,6 +598,8 @@ footer p {
   #menu-hamburguer {
     display: block;
     font-size: 2rem;
+    pointer-events: auto !important;
+    z-index: 9999 !important;
   }
 
   section:first-of-type {

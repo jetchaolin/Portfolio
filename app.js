@@ -27,6 +27,13 @@ menuLinks.forEach(link => {
   link.addEventListener('click', closeMenu);
 });
 
+document.addEventListener('click', (e) => {
+  const isMenuOpen = menuToggle.getAttribute("aria-expanded") === "false";
+  if (isMenuOpen && !menu.contains(e.target) && e.target !== menuToggle) {
+    setTimeout(closeMenu, 10);
+  }
+});
+
 function closeMenu() {
   menu.style.display = "none";
 }
