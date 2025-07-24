@@ -653,6 +653,20 @@ footer p {
   }
 }
 
+.page-end {
+  
+}
+
+.go-up {
+  display: none;
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1400px) {
   section:first-of-type {
     min-height: 60vh;
