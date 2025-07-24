@@ -25,6 +25,29 @@ function closeMenu() {
   menu.style.display = "none";
 }
 
+document.getElementById('myForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = encodeURIComponent(document.getElementById('name').value);
+  const email = encodeURIComponent(document.getElementById('mail').value);
+  const subject = encodeURIComponent(document.getElementById('subject').value);
+  const message = encodeURIComponent(document.getElementById('msg').value);
+  
+  const mailtoLink = `mailto:joao.ramos0793@gmail.com?subject=${subject}&body=Nome: ${name}%0AEmail: ${email}%0A%0AMensagem:%0A${message}`;
+  
+  window.location.href = mailtoLink;
+});
+
+window.addEventListener('scroll', function() {
+  const goUpButton = document.querySelector('.go-up');
+  // Mostrar o botão após rolar 500px para baixo (ajuste conforme necessário)
+  if (window.scrollY > 800) {
+    goUpButton.style.display = 'flex'; // ou 'block' dependendo do seu CSS
+  } else {
+    goUpButton.style.display = 'none';
+  }
+});
+
 
 // function toggleMenu() {
 //   const isExpanded = menuToggle.getAttribute("aria-expanded")
