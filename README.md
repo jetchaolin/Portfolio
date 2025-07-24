@@ -1,4 +1,4 @@
-# Portifolio
+# Portfolio
 
 ## **Curso Mais Prati - Exercício 4 - Portifolio - Bonus: Git Pages**
 
