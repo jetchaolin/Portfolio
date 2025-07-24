@@ -1,6 +1,6 @@
 # Portifolio
 
-## **Curso Mais Prati - Exercício 4 - Portifolio**
+## **Curso Mais Prati - Exercício 4 - Portifolio - Bonus: Git Pages**
 
 ## **Pré-requisitos**
 
@@ -22,6 +22,6 @@ git clone git@github.com:jetchaolin/Portifolio.git # Ssh
 ```
 
 # **Imporatante**
-Os links para a demonstração dos projetos podem não funcionar na IDEA.
-<br>
-Para visualizar os projetos, copie a url do preview e cole no seu navegador.
+* Os links para a demonstração dos projetos podem não funcionar na IDEA.
+* Para visualizar os projetos, copie a url do preview e cole no seu navegador.
+* Você pode também acessar o git pages através do [Link](https://jetchaolin.github.io/Portifolio/)
