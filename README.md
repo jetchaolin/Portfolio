@@ -28,4 +28,4 @@ git clone git@github.com:jetchaolin/Portifolio.git # Ssh
 # **Importante**
 * Os links para a demonstração dos projetos podem não funcionar na IDE.
 * Para visualizar os projetos, copie a url do preview e cole no seu navegador.
-* Você pode também acessar o git pages através do [Link](https://jetchaolin.github.io/Portifolio/)
+* Você pode também acessar o git pages através do [Link](https://jetchaolin.github.io/Portfolio/)
