@@ -1,69 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Desenvolvimento Web, HTML, CSS e JS">
-    <link rel="stylesheet" href="CSS/style.css">
-    <meta name="author" content="João">
-    <title>Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Desenvolvimento Web, HTML, CSS e JS" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <meta name="author" content="João" />
+    <title>Portfólio | João Ramos</title>
   </head>
   <!-- TODO: i18n !!!!!!!!!!!-->
+
   <body>
-    <div>
+    <div id="main-container">
       <header>
         <nav>
-          <h1 id="main-title">Portfolio</h1>
-          <button 
-            id="menu-hamburguer" 
-            aria-label="Abrir menu" 
-            aria-expanded="false" 
+          <h1 id="main-title">Portfólio</h1>
+          <button
+            id="menu-hamburguer"
+            aria-label="Abrir menu"
+            aria-expanded="false"
             aria-controls="menu"
           >
-            <span class="hamburger-icon" ">&#9776</span>
+            <span class="hamburger-icon">&#9776;</span>
           </button>
-            <ul id="menu-open" class="menu" aria-hidden="true">
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#hobbies">Hobbies</a></li>
-              <li><a href="#projects">Projetos</a></li>
-              <li><a href="#contacts">Contato</a></li>
-              <li ><button class="close" aria-label="Fechar menu" onclick="closeMenu()">X</button></li>
-            </ul>
+          <ul id="menu-open" class="menu" aria-hidden="true">
+            <li><a href="#about">Sobre</a></li>
+            <!-- <li><a href="#skills">Skills</a></li> -->
+            <!-- <li><a href="#hobbies">Hobbies</a></li> -->
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contacts">Contato</a></li>
+            <!-- <li> -->
+            <!--   <button id="close-button" class="close" aria-label="Fechar menu" onclick="closeMenu()">X</button> -->
+            <!-- </li> -->
+          </ul>
         </nav>
-        <hr class="line">
+        <hr class="line" />
       </header>
-      <section>
-        <h1 class="about-me-1">
-          Olá, meu nome é João Victor e construo páginas web
-        </h1>        
+
+      <section id="main" class="first-section">
+        <h1 class="about-me-1">Olá, meu nome é João Victor e construo páginas web</h1>
         <div class="about-me-2">
           <p>
-            Eu sou desenvolvedor web com foco em <strong>Ruby</strong> e <strong>Ruby on Rails</strong> para o <strong>back-end</strong>.<br> 
-            Além de <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>, <strong>React</strong> e <strong>Tailwind CSS</strong> para o <strong>front-end</strong>.
+            Eu sou desenvolvedor web com foco em
+            <strong>Ruby</strong> e <strong>Ruby on Rails</strong> para o
+            <strong>back-end</strong>.<br />
+            Além de <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>,
+            <strong>React</strong> e <strong>Tailwind CSS</strong> para o
+            <strong>front-end</strong>.
           </p>
         </div>
-        <div id="skills" class="skills">
+        <div class="skills">
           <h1>Skills</h1>
           <ul>
             <li>Ruby</li>
             <li>Ruby on Rails</li>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Tailwind CSS</li>
             <li>Git</li>
             <li>GitHub</li>
             <li>SQLite</li>
             <li>PostgreSQL</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>React</li>
-            <li>Tailwind CSS</li>
-            <li>Java</li>            
+            <li>Linux</li>
+            <li>Docker</li>
           </ul>
         </div>
         <div class="links">
-          <a href="https://github.com/jetchaolin" target="_blank">
-            GitHub
-          </a>
+          <a href="https://github.com/jetchaolin" target="_blank"> GitHub </a>
           <a href="https://www.linkedin.com/in/joão-victor-de-oliveira-ramos/" target="_blank">
             LinkedIn
           </a>
@@ -72,87 +83,123 @@
           </a>       -->
         </div>
       </section>
-      <section>
-        <h1 id="about">Precisa de um web site?</h1>
-        <div class="cards-collection">
-          <p class="card">
-            Páginas customizadas de acordo com o seu negócio, responsivas e com o melhor desempenho.
-          </p>
-          <p class="card">
-            Para impulsionar seu empreendimento adiante basta entrar em contato.
-          </p>
+
+      <section id="about" class="second-section">
+        <div class="gradient">
+          <h1>Precisa de um web site?</h1>
+          <div class="cards-collection-1">
+            <div class="card-container-1">
+              <p class="card">
+                Páginas customizadas de acordo com o seu projeto, responsivas e com o melhor
+                desempenho.
+              </p>
+              <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" />
+            </div>
+          </div>
+        </div>
+        <div class="gradient">
+          <div class="cards-collection-2">
+            <div class="card-container-2">
+              <img
+                class="card-img"
+                src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif"
+              />
+              <p class="card">
+                Para impulsionar seu empreendimento adiante com tecnologias modernas basta entrar em
+                contato.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-      <div>
-        <h2 id="hobbies">Hobbies</h2>
-        <ul>
-          <li>Ouvir música</li>
-          <li>Jogar jogos</li>
-          <li>Assistir séries</li>
-          <li>Assistir jogos</li>
-          <li>Linux ricing</li>
-        </ul>
-      </div>
-      <div>
-        <h2 id="projects">Projetos</h2>
-        <div>
-          <div>
-            <h3>Jogo da velha - React</h3>
-            <img src="assets/opera_pCohNR8ppL.png" style="width: 500px; height: 300px" />
-            <p>
-              Desafio em React completo.
-            </p>
-            <a href="https://github.com/jetchaolin/tic-tac-toe" target="_blank">
-              <button>Repositório</button>
-            </a>
-            <a href="tic-tac-toe.html" target="_blank">
-              <button>Ver demo</button>
-            </a>
+
+      <!-- <div> -->
+      <!--   <h2 id="hobbies">Hobbies</h2> -->
+      <!--   <ul> -->
+      <!--     <li>Ouvir música</li> -->
+      <!--     <li>Jogar jogos</li> -->
+      <!--     <li>Assistir séries</li> -->
+      <!--     <li>Assistir jogos</li> -->
+      <!--     <li>Linux ricing</li> -->
+      <!--   </ul> -->
+      <!-- </div> -->
+
+      <section id="projects" class="third-section">
+        <div id="showcase">
+          <div id="project">
+            <h2 id="project-showcase">Projeto:</h2>
+            <h3 id="titulo-projeto">Aguardando carregamento...</h3>
+            <button id="left-button" class="showcase-btn" type="">
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <button id="right-button" class="showcase-btn" type="">
+              <span class="material-symbols-outlined"> arrow_forward </span>
+            </button>
           </div>
-          <div>
-            <h3>Lista de tarefas - Ruby on rails</h3>
-            <img src="assets/Photos_oF3aUUIFLm.png" style="width: 100%; height: 300px" />
-            <p>
-              Meu primeiro projeto em Ruby on rails.
-            </p>
-            <a href="https://github.com/jetchaolin/task_list" target="_blank">
-              <button>Repositório</button>
-            </a>
-            <a href="./task-list.html" target="_blank">
-              <button>Ver demo</button>
-            </a>
-          </div>
-          <div>
-            <h3>Blog - React on Rails</h3>
-            <img src="assets/Photos_AZAGKOnwU6.png" style="width: 100%; height: 300px" />
-            <p>
-              Blog estilo Twitter com React.
-            </p>
-            <a href="https://github.com/jetchaolin/rails_react_app" target="_blank">
-              <button>Repositório</button>
-            </a>
-            <a href="./rails-blog.html" target="_blank">
-              <button>Ver demo</button>
-            </a>
-          </div>
-          <div>
-            <h3>Short News - React on Rails</h3>
-            <img src="assets/Photos_zB7oTWu2vF.png" style="width: 500px; height: 300px" />
-            <p>
-              Projeto de site de notícias.
-            </p>
-            <a href="https://github.com/jetchaolin/short-news" target="_blank">
-              <button>Repositório</button>
-            </a>
-            <a href="./short-news.html" target="_blank">
-              <button>Ver demo</button>
-            </a>
-          </div> 
-        </div>        
-      </div>
-      <div class="page-end">
-        <h2 id="contacts">Contato</h2>
-        <p>Quer entrar em contato comigo?<br> Preencha o formulário abaixo.</p>
+        </div>
+
+        <!-- <h2 id="projects">Projetos</h2> -->
+        <!-- <div> -->
+        <!--   <div> -->
+        <!--     <h3>Jogo da velha - React</h3> -->
+        <!--     <img src="assets/opera_pCohNR8ppL.png" style="width: 500px; height: 300px" /> -->
+        <!--     <p> -->
+        <!--       Desafio em React completo. -->
+        <!--     </p> -->
+        <!--     <a href="https://github.com/jetchaolin/tic-tac-toe" target="_blank"> -->
+        <!--       <button>Repositório</button> -->
+        <!--     </a> -->
+        <!--     <a href="tic-tac-toe.html" target="_blank"> -->
+        <!--       <button>Ver demo</button> -->
+        <!--     </a> -->
+        <!--   </div> -->
+        <!--   <div> -->
+        <!--     <h3>Lista de tarefas - Ruby on rails</h3> -->
+        <!--     <img src="assets/Photos_oF3aUUIFLm.png" style="width: 100%; height: 300px" /> -->
+        <!--     <p> -->
+        <!--       Meu primeiro projeto em Ruby on rails. -->
+        <!--     </p> -->
+        <!--     <a href="https://github.com/jetchaolin/task_list" target="_blank"> -->
+        <!--       <button>Repositório</button> -->
+        <!--     </a> -->
+        <!--     <a href="./task-list.html" target="_blank"> -->
+        <!--       <button>Ver demo</button> -->
+        <!--     </a> -->
+        <!--   </div> -->
+        <!--   <div> -->
+        <!--     <h3>Blog - React on Rails</h3> -->
+        <!--     <img src="assets/Photos_AZAGKOnwU6.png" style="width: 100%; height: 300px" /> -->
+        <!--     <p> -->
+        <!--       Blog estilo Twitter com React. -->
+        <!--     </p> -->
+        <!--     <a href="https://github.com/jetchaolin/rails_react_app" target="_blank"> -->
+        <!--       <button>Repositório</button> -->
+        <!--     </a> -->
+        <!--     <a href="./rails-blog.html" target="_blank"> -->
+        <!--       <button>Ver demo</button> -->
+        <!--     </a> -->
+        <!--   </div> -->
+        <!--   <div> -->
+        <!--     <h3>Short News - React on Rails</h3> -->
+        <!--     <img src="assets/Photos_zB7oTWu2vF.png" style="width: 500px; height: 300px" /> -->
+        <!--     <p> -->
+        <!--       Projeto de site de notícias. -->
+        <!--     </p> -->
+        <!--     <a href="https://github.com/jetchaolin/short-news" target="_blank"> -->
+        <!--       <button>Repositório</button> -->
+        <!--     </a> -->
+        <!--     <a href="./short-news.html" target="_blank"> -->
+        <!--       <button>Ver demo</button> -->
+        <!--     </a> -->
+        <!--   </div>  -->
+      </section>
+
+      <section id="contacts" class="forth-section">
+        <!-- <h2>Contato</h2> -->
+        <p>
+          Quer entrar em contato comigo?<br />
+          Preencha o formulário abaixo.
+        </p>
         <form id="myForm">
           <div>
             <label for="name">Nome</label>
@@ -174,15 +221,15 @@
             <button type="submit">Enviar</button>
           </div>
         </form>
-        <a href="#main-title" class="go-up">^</a>
-      </div>
-      <footer>
-        <p>
-          Desenvolvido por João Ramos - 2025
-        </p>
+        <a href="#main" class="go-up"
+          ><span class="material-symbols-outlined"> arrow_drop_up </span></a
+        >
+      </section>
+
+      <footer class="fith-section">
+        <p>Desenvolvido por João Ramos - 2025</p>
       </footer>
     </div>
+    <script type="module" src="app.js"></script>
   </body>
-  <script src="app.js"></script>
 </html>
-
