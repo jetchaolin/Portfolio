@@ -1,10 +1,16 @@
 let translations = {};
 let currentLang = 'pt-BR';
 
-const browserLang = navigator.language.startsWith('pt') ? 'pt-BR' : 'en-US';
+const browserLang = navigator.language.startsWith('pt') ? ['PT', 'pt-BR'] : ['EN', 'en-US'];
 
-const savedLang = localStorage.getItem('lang') || browserLang || 'pt-BR';
-// const savedLang = localStorage.getItem('lang') || 'pt-BR';
+const storedLang = localStorage.getItem('lang') || browserLang || 'pt-BR';
+// const savedLang = localStorage.getItem('lang') || 'pt-BR';]
+ let processedStoredLang = ""
+if (storedLang.length <= 1) {
+        processedStoredLang = storedLang.split(',');
+} else {
+        processedStoredLang = storedLang;
+}
 
 async function loadLanguage(lang) {
         const response = await fetch(`/i18n/${lang}.json`);
@@ -28,8 +34,8 @@ async function initI18n(lang) {
         updateTexts();
 }
 
-if (savedLang) {
-        initI18n(savedLang.slice(3, savedLang.length));
+if (processedStoredLang) {
+        initI18n(processedStoredLang[1]);
 } else {
         initI18n('pt-BR');
 }
@@ -39,7 +45,7 @@ if (savedLang) {
 const select = document.querySelector('.custom-select');
 const btn = document.getElementById('select-btn');
 
-btn.innerHTML = savedLang.slice(0, 2);
+btn.innerHTML = processedStoredLang[0];
 
 document.querySelectorAll('.options li').forEach((option) => {
         option.addEventListener('click', () => {
@@ -47,10 +53,10 @@ document.querySelectorAll('.options li').forEach((option) => {
                 select.classList.remove('open');
 
                 let selectedLang = option.dataset.value;
-                let lang = selectedLang.slice(0, 2).toLocaleUpperCase();
+                let lang = selectedLang.slice(0).toLocaleUpperCase();
 
                 initI18n(selectedLang);
-                localStorage.setItem('lang', [lang, selectedLang]);
+                localStorage.setItem('lang', [lang.toString(), selectedLang.toString()]);
         });
 });
 
