@@ -53,7 +53,7 @@ document.querySelectorAll('.options li').forEach((option) => {
                 select.classList.remove('open');
 
                 let selectedLang = option.dataset.value;
-                let lang = selectedLang.slice(0).toLocaleUpperCase();
+                let lang = selectedLang.slice(0, 2).toLocaleUpperCase();
 
                 initI18n(selectedLang);
                 localStorage.setItem('lang', [lang.toString(), selectedLang.toString()]);
