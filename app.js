@@ -22,22 +22,30 @@ const listaDeTarefas = montarProjeto(
 
 const blogRails = montarProjeto(
         'Blog - React on Rails',
-        { src: 'assets/Photos_AZAGKOnwU6.png' },
+        { src: 'assets/rails-blog/rails-blog.png' },
         { href: 'https://github.com/jetchaolin/rails_react_app', target: '_blank' },
         { href: './rails-blog.html', target: '_blank' },
 );
 
 const shortNews = montarProjeto(
         'Short News - React on Rails',
-        { src: 'assets/Photos_zB7oTWu2vF.png' },
+        { src: 'assets/short-news/dashboard.png' },
         { href: 'https://github.com/jetchaolin/short-news', target: '_blank' },
         { href: './short-news.html', target: '_blank' },
 );
+
+const moviesApi = montarProjeto(
+	'Movies API - React',
+	{ src: 'assets/movies-api/movies-api.png' },
+	{ href: 'https://github.com/jetchaolin/react-movies-api', target: '_blank' },
+	{ href: ''},
+)
 
 projetos.push(jogoDaVelha);
 projetos.push(listaDeTarefas);
 projetos.push(blogRails);
 projetos.push(shortNews);
+projetos.push(moviesApi);
 
 let projetoAtual = 0;
 console.log(projetoAtual);
@@ -80,6 +88,12 @@ rightButton.addEventListener('click', () => {
         }, 300);
 });
 
+const ghButton = document.getElementById('github-btn');
+
+ghButton.addEventListener('click', () => {
+        window.open(projetos[projetoAtual].gitHub.href, '_blank', 'noopener,noreferrer');
+});
+
 // MENU HAMBURGUER
 menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
@@ -120,7 +134,7 @@ function closeMenu() {
 }
 
 // FORMULARIO
-document.getElementById('myForm').addEventListener('submit', function (e) {
+document.getElementById('my-form').addEventListener('submit', function (e) {
         e.preventDefault();
 
         const name = encodeURIComponent(document.getElementById('name').value);
@@ -176,27 +190,29 @@ sections.forEach((section) => {
         observer.observe(section);
 });
 
- // ANIMACOES
- const imgObsv = new IntersectionObserver((entries) => {
-   entries.forEach(entry => {
-     if (entry.isIntersecting) {
-       entry.target.classList.add('is-visible');
-       imgObsv.unobserve(entry.target); // anima só uma vez
-     }
-   });
- }, {
-   threshold: 0.2
- });
+// ANIMACOES
+const imgObsv = new IntersectionObserver(
+        (entries) => {
+                entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                                entry.target.classList.add('is-visible');
+                                imgObsv.unobserve(entry.target); // anima só uma vez
+                        }
+                });
+        },
+        {
+                threshold: 0.2,
+        },
+);
 
- document.querySelectorAll('.card').forEach(el => {
-   imgObsv.observe(el);
- });
+document.querySelectorAll('.card').forEach((el) => {
+        imgObsv.observe(el);
+});
 
- document.querySelectorAll('.card-img').forEach(el => {
-   imgObsv.observe(el);
- });
+document.querySelectorAll('.card-img').forEach((el) => {
+        imgObsv.observe(el);
+});
 
- document.querySelectorAll('.third-section').forEach(el => {
-   imgObsv.observe(el);
- });
-
+document.querySelectorAll('.second-section').forEach((el) => {
+        imgObsv.observe(el);
+});

@@ -28,10 +28,10 @@
             <span class="hamburger-icon">&#9776;</span>
           </button>
           <ul id="menu-open" class="menu" aria-hidden="true">
-            <li><a href="#about">Sobre</a></li>
             <!-- <li><a href="#skills">Skills</a></li> -->
             <!-- <li><a href="#hobbies">Hobbies</a></li> -->
             <li><a href="#projects">Projetos</a></li>
+            <li><a href="#about">Sobre</a></li>
             <li><a href="#contacts">Contato</a></li>
             <!-- <li> -->
             <!--   <button id="close-button" class="close" aria-label="Fechar menu" onclick="closeMenu()">X</button> -->
@@ -43,7 +43,9 @@
 
       <section id="main" class="first-section">
         <div id="main-header">
-          <img class="me" src="assets/my-pic-light.jpg" />
+          <div class="img-wrapper">
+            <img class="me" src="assets/my-pic-light.jpg" />
+          </div>
           <div>
             <h1 class="about-me-1">Olá, meu nome é <br /><strong>João Victor</strong></h1>
             <div class="about-me-2">
@@ -62,62 +64,63 @@
             Desenvolvedor Fullstack familiarizado com ambientes Linux. Tenho experiência com
             diversas tecnologias, como Ruby, Ruby on Rails, Java, Spring Boot, JavaScript, React,
             HTML, CSS, Tailwind CSS, Git, GitHub, SQLite, PostgreSQL e Docker. No meu tempo livre,
-            gosto de customizar meu ambiente de desenvolvimento Linux (ricing), desde a aparência
+            gosto de customizar meu ambiente Linux (também conhecido como ricing), desde a aparência
             até scripts e atalhos que me ajudam a melhorar a produtividade
           </p>
         </div>
         <div class="skills">
           <h1>Habilidades</h1>
-          <ul>
-            <li>Ruby <img src="assets/ruby.png" /></li>
-            <li>Rails <img src="assets/ruby-on-rails.png" style="height: 40px; width: 80px" /></li>
-            <li>Java <img src="assets/java.png" style="height: 55px; width: 35px" /></li>
-            <li>Spring Boot <img src="assets/springboot-initializer.png" /></li>
-            <li>Javascript <img src="assets/javascript-light.png" /></li>
-            <li>React <img src="assets/reactjs.png" /></li>
-            <li>HTML <img src="assets/html-light.png" /></li>
-            <li>CSS <img src="assets/css-light.png" /></li>
-            <li>Tailwind <img src="assets/tailwind.png" /></li>
-            <li>Git <img src="assets/git.png" /></li>
-            <li>GitHub <img src="assets/github-light.png" /></li>
-            <li>SQLite</li>
-            <li>PostgreSQL <img src="assets/postgresql.png" /></li>
-            <li>Linux <img src="assets/linux.png" /></li>
-            <li>Docker <img src="assets/docker.png" /></li>
-          </ul>
+          <div class="skills-transparency">
+            <div class="skills-track">
+              <ul>
+                <li>Ruby <img src="assets/ruby.png" /></li>
+                <li>
+                  Rails <img src="assets/ruby-on-rails.png" style="height: 40px; width: 80px" />
+                </li>
+                <li>
+                  Java <img src="assets/java-customized.svg" style="height: 50px; width: 55px" />
+                </li>
+                <li>Spring Boot <img src="assets/springboot-initializer.png" /></li>
+                <li>Javascript <img src="assets/javascript-light.png" /></li>
+                <li>React <img src="assets/reactjs.png" /></li>
+                <li>HTML <img src="assets/html-light.png" /></li>
+                <li>CSS <img src="assets/css-light.png" /></li>
+                <li>Tailwind <img src="assets/tailwind.png" /></li>
+                <li>Git <img src="assets/git.png" /></li>
+                <li>GitHub <img src="assets/github-light.png" /></li>
+                <li>SQLite <img src="assets/sqlite.png" /></li>
+                <li>PostgreSQL <img src="assets/postgresql.png" /></li>
+                <li>Linux <img src="assets/linux.png" /></li>
+                <li>Docker <img src="assets/docker-customized.svg" /></li>
+              </ul>
+
+              <ul>
+                <li>Ruby <img src="assets/ruby.png" /></li>
+                <li>
+                  Rails <img src="assets/ruby-on-rails.png" style="height: 40px; width: 80px" />
+                </li>
+                <li>
+                  Java <img src="assets/java-customized.svg" style="height: 55px; width: 35px" />
+                </li>
+                <li>Spring Boot <img src="assets/springboot-initializer.png" /></li>
+                <li>Javascript <img src="assets/javascript-light.png" /></li>
+                <li>React <img src="assets/reactjs.png" /></li>
+                <li>HTML <img src="assets/html-light.png" /></li>
+                <li>CSS <img src="assets/css-light.png" /></li>
+                <li>Tailwind <img src="assets/tailwind.png" /></li>
+                <li>Git <img src="assets/git.png" /></li>
+                <li>GitHub <img src="assets/github-light.png" /></li>
+                <li>SQLite <img src="assets/sqlite.png" /></li>
+                <li>PostgreSQL <img src="assets/postgresql.png" /></li>
+                <li>Linux <img src="assets/linux.png" /></li>
+                <li>Docker <img src="assets/docker-customized.svg" /></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="second-section">
-        <h1>Projetos de destaque</h1>
-        <div class="cards-collection-1">
-          <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" />
-          <img
-            class="card-img"
-            src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif"
-          />
-        </div>
-        <div class="cards-collection-1">
-          <img
-            class="card-img"
-            src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif"
-          />
-          <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" />
-        </div>
-      </section>
-
-      <!-- <div> -->
-      <!--   <h2 id="hobbies">Hobbies</h2> -->
-      <!--   <ul> -->
-      <!--     <li>Ouvir música</li> -->
-      <!--     <li>Jogar jogos</li> -->
-      <!--     <li>Assistir séries</li> -->
-      <!--     <li>Assistir jogos</li> -->
-      <!--     <li>Linux ricing</li> -->
-      <!--   </ul> -->
-      <!-- </div> -->
-
-      <section id="projects" class="third-section">
+      <section id="projects" class="second-section">
         <div id="showcase">
           <div id="project">
             <h2 id="project-showcase">Projeto:</h2>
@@ -128,6 +131,7 @@
             <button id="right-button" class="showcase-btn" type="">
               <span class="material-symbols-outlined"> arrow_forward </span>
             </button>
+	    <button id="github-btn">GitHub</button>
           </div>
         </div>
 
@@ -187,13 +191,42 @@
         <!--   </div>  -->
       </section>
 
+      <section id="about" class="third-section">
+        <h1>Projetos de destaque</h1>
+        <div class="cards-collection-1">
+          <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" />
+          <img
+            class="card-img"
+            src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif"
+          />
+        </div>
+        <div class="cards-collection-1">
+          <img
+            class="card-img"
+            src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif"
+          />
+          <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" />
+        </div>
+      </section>
+
+      <!-- <div> -->
+      <!--   <h2 id="hobbies">Hobbies</h2> -->
+      <!--   <ul> -->
+      <!--     <li>Ouvir música</li> -->
+      <!--     <li>Jogar jogos</li> -->
+      <!--     <li>Assistir séries</li> -->
+      <!--     <li>Assistir jogos</li> -->
+      <!--     <li>Linux ricing</li> -->
+      <!--   </ul> -->
+      <!-- </div> -->
+
       <section id="contacts" class="forth-section">
         <!-- <h2>Contato</h2> -->
         <p>
           Quer entrar em contato comigo?<br />
           Preencha o formulário abaixo.
         </p>
-        <form id="myForm">
+        <form id="my-form">
           <div>
             <label for="name">Nome</label>
             <input type="text" id="name" name="user_name" required />
