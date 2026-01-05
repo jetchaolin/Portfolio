@@ -1,161 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Desenvolvimento Web, HTML, CSS e JS">
-    <link rel="stylesheet" href="CSS/style.css">
-    <meta name="author" content="João">
-    <title>Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Desenvolvimento Web, HTML, CSS e JS" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <meta name="author" content="João" />
+    <title>Portfólio | João Ramos</title>
   </head>
   <!-- TODO: i18n !!!!!!!!!!!-->
+
   <body>
-    <div>
+    <div id="main-container">
       <header>
         <nav>
-          <h1 id="main-title">Portfolio</h1>
-          <button 
-            id="menu-hamburguer" 
-            aria-label="Abrir menu" 
-            aria-expanded="false" 
+          <h1 id="main-title" data-i18n="nav.main-title">Portfólio</h1>
+          <button
+            id="menu-hamburguer"
+            aria-label="Abrir menu"
+            aria-expanded="false"
             aria-controls="menu"
           >
-            <span class="hamburger-icon" ">&#9776</span>
+            <span class="hamburger-icon">&#9776;</span>
           </button>
-            <ul id="menu-open" class="menu" aria-hidden="true">
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#hobbies">Hobbies</a></li>
-              <li><a href="#projects">Projetos</a></li>
-              <li><a href="#contacts">Contato</a></li>
-              <li ><button class="close" aria-label="Fechar menu" onclick="closeMenu()">X</button></li>
+          <!-- <select id="lang-select"> -->
+          <!--   <option class="drop-down-lang" value="pt-BR">PT</option> -->
+          <!--   <option class="drop-down-lang" value="en-US">EN</option> -->
+          <!-- </select> -->
+          <div class="custom-select">
+            <button id="select-btn">PT</button>
+            <ul class="options">
+              <li data-value="pt-BR">PT</li>
+              <li data-value="en-US">EN</li>
             </ul>
-        </nav>
-        <hr class="line">
-      </header>
-      <section>
-        <h1 class="about-me-1">
-          Olá, meu nome é João Victor e construo páginas web
-        </h1>        
-        <div class="about-me-2">
-          <p>
-            Eu sou desenvolvedor web com foco em <strong>Ruby</strong> e <strong>Ruby on Rails</strong> para o <strong>back-end</strong>.<br> 
-            Além de <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>, <strong>React</strong> e <strong>Tailwind CSS</strong> para o <strong>front-end</strong>.
-          </p>
-        </div>
-        <div id="skills" class="skills">
-          <h1>Skills</h1>
-          <ul>
-            <li>Ruby</li>
-            <li>Ruby on Rails</li>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>SQLite</li>
-            <li>PostgreSQL</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>React</li>
-            <li>Tailwind CSS</li>
-            <li>Java</li>            
+          </div>
+          <ul id="menu-open" class="menu" aria-hidden="true">
+            <!-- <li><a href="#skills">Skills</a></li> -->
+            <!-- <li><a href="#hobbies">Hobbies</a></li> -->
+            <li><a href="#projects" data-i18n="nav.projects"></a></li>
+            <!-- <li><a href="#about" data-i18n="nav.about">Sobre</a></li> -->
+            <li><a href="#contacts" data-i18n="nav.contact">Contato</a></li>
+            <!-- <li> -->
+            <!--   <button id="close-button" class="close" aria-label="Fechar menu" onclick="closeMenu()">X</button> -->
+            <!-- </li> -->
           </ul>
+        </nav>
+        <hr class="line" />
+      </header>
+
+      <section id="main" class="first-section">
+        <div id="main-header">
+          <div class="img-wrapper">
+            <img class="me" src="assets/my-pic-light.jpg" />
+          </div>
+          <div>
+            <h1 class="about-me-1" data-i18n="hero.title">Olá, meu nome é</h1>
+            <h1><strong data-i18n="hero.name">João Victor</strong></h1>
+            <div class="about-me-2">
+              <p data-i18n="hero.subtitle">Sou desenvolvedor web fullstack.<br /></p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/joão-victor-de-oliveira-ramos/" target="_blank">
+                LinkedIn
+              </a>
+              <a href="https://github.com/jetchaolin" target="_blank"> GitHub </a>
+            </div>
+          </div>
         </div>
-        <div class="links">
-          <a href="https://github.com/jetchaolin" target="_blank">
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/joão-victor-de-oliveira-ramos/" target="_blank">
-            LinkedIn
-          </a>
-          <!-- <a href="./assets/João Ramos CV 2024.pdf" target="_blank">
-            Curriculo
-          </a>       -->
+        <div class="about-me-3">
+          <p data-i18n="hero.text">
+            Desenvolvedor Fullstack familiarizado com ambientes Linux. Tenho experiência com
+            diversas tecnologias, como Ruby, Ruby on Rails, Java, Spring Boot, JavaScript, React,
+            HTML, CSS, Tailwind CSS, Git, GitHub, SQLite, PostgreSQL e Docker. No meu tempo livre,
+            gosto de customizar meu ambiente Linux (também conhecido como ricing), desde a aparência
+            até scripts e atalhos que me ajudam a melhorar a produtividade
+          </p>
+        </div>
+        <div class="skills">
+          <h1 data-i18n="hero.skills">Habilidades</h1>
+          <div class="skills-transparency">
+            <div class="skills-track">
+              <ul>
+                <li>Ruby <img src="assets/ruby.png" /></li>
+                <li>
+                  Rails <img src="assets/ruby-on-rails.png" style="height: 40px; width: 80px" />
+                </li>
+                <li>
+                  Java <img src="assets/java-customized.svg" style="height: 50px; width: 55px" />
+                </li>
+                <li>Spring Boot <img src="assets/springboot-initializer.png" /></li>
+                <li>Javascript <img src="assets/javascript-light.png" /></li>
+                <li>React <img src="assets/reactjs.png" /></li>
+                <li>HTML <img src="assets/html-light.png" /></li>
+                <li>CSS <img src="assets/css-light.png" /></li>
+                <li>Tailwind <img src="assets/tailwind.png" /></li>
+                <li>Git <img src="assets/git.png" /></li>
+                <li>GitHub <img src="assets/github-light.png" /></li>
+                <li>SQLite <img src="assets/sqlite.png" /></li>
+                <li>PostgreSQL <img src="assets/postgresql.png" /></li>
+                <li>Linux <img src="assets/linux.png" /></li>
+                <li>Docker <img src="assets/docker-customized.svg" /></li>
+              </ul>
+
+              <ul>
+                <li>Ruby <img src="assets/ruby.png" /></li>
+                <li>
+                  Rails <img src="assets/ruby-on-rails.png" style="height: 40px; width: 80px" />
+                </li>
+                <li>
+                  Java <img src="assets/java-customized.svg" style="height: 55px; width: 35px" />
+                </li>
+                <li>Spring Boot <img src="assets/springboot-initializer.png" /></li>
+                <li>Javascript <img src="assets/javascript-light.png" /></li>
+                <li>React <img src="assets/reactjs.png" /></li>
+                <li>HTML <img src="assets/html-light.png" /></li>
+                <li>CSS <img src="assets/css-light.png" /></li>
+                <li>Tailwind <img src="assets/tailwind.png" /></li>
+                <li>Git <img src="assets/git.png" /></li>
+                <li>GitHub <img src="assets/github-light.png" /></li>
+                <li>SQLite <img src="assets/sqlite.png" /></li>
+                <li>PostgreSQL <img src="assets/postgresql.png" /></li>
+                <li>Linux <img src="assets/linux.png" /></li>
+                <li>Docker <img src="assets/docker-customized.svg" /></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
-      <section>
-        <h1 id="about">Precisa de um web site?</h1>
-        <div class="cards-collection">
-          <p class="card">
-            Páginas customizadas de acordo com o seu negócio, responsivas e com o melhor desempenho.
-          </p>
-          <p class="card">
-            Para impulsionar seu empreendimento adiante basta entrar em contato.
-          </p>
+
+      <section id="projects" class="second-section">
+        <div id="showcase">
+          <div id="project">
+            <h2 id="project-showcase" data-i18n="projects.label">Projeto:</h2>
+            <h3 id="titulo-projeto">Aguardando carregamento...</h3>
+            <button id="left-button" class="showcase-btn" type="">
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <button id="right-button" class="showcase-btn" type="">
+              <span class="material-symbols-outlined"> arrow_forward </span>
+            </button>
+            <button id="github-btn">GitHub</button>
+          </div>
         </div>
+
+        <!-- <h2 id="projects">Projetos</h2> -->
+        <!-- <div> -->
+        <!--   <div> -->
+        <!--     <h3>Jogo da velha - React</h3> -->
+        <!--     <img src="assets/opera_pCohNR8ppL.png" style="width: 500px; height: 300px" /> -->
+        <!--     <p> -->
+        <!--       Desafio em React completo. -->
+        <!--     </p> -->
+        <!--     <a href="https://github.com/jetchaolin/tic-tac-toe" target="_blank"> -->
+        <!--       <button>Repositório</button> -->
+        <!--     </a> -->
+        <!--     <a href="tic-tac-toe.html" target="_blank"> -->
+        <!--       <button>Ver demo</button> -->
+        <!--     </a> -->
+        <!--   </div> -->
+        <!--   <div> -->
+        <!--     <h3>Lista de tarefas - Ruby on rails</h3> -->
+        <!--     <img src="assets/Photos_oF3aUUIFLm.png" style="width: 100%; height: 300px" /> -->
+        <!--     <p> -->
+        <!--       Meu primeiro projeto em Ruby on rails. -->
+        <!--     </p> -->
+        <!--     <a href="https://github.com/jetchaolin/task_list" target="_blank"> -->
+        <!--       <button>Repositório</button> -->
+        <!--     </a> -->
+        <!--     <a href="./task-list.html" target="_blank"> -->
+        <!--       <button>Ver demo</button> -->
+        <!--     </a> -->
+        <!--   </div> -->
+        <!--   <div> -->
+        <!--     <h3>Blog - React on Rails</h3> -->
+        <!--     <img src="assets/Photos_AZAGKOnwU6.png" style="width: 100%; height: 300px" /> -->
+        <!--     <p> -->
+        <!--       Blog estilo Twitter com React. -->
+        <!--     </p> -->
+        <!--     <a href="https://github.com/jetchaolin/rails_react_app" target="_blank"> -->
+        <!--       <button>Repositório</button> -->
+        <!--     </a> -->
+        <!--     <a href="./rails-blog.html" target="_blank"> -->
+        <!--       <button>Ver demo</button> -->
+        <!--     </a> -->
+        <!--   </div> -->
+        <!--   <div> -->
+        <!--     <h3>Short News - React on Rails</h3> -->
+        <!--     <img src="assets/Photos_zB7oTWu2vF.png" style="width: 500px; height: 300px" /> -->
+        <!--     <p> -->
+        <!--       Projeto de site de notícias. -->
+        <!--     </p> -->
+        <!--     <a href="https://github.com/jetchaolin/short-news" target="_blank"> -->
+        <!--       <button>Repositório</button> -->
+        <!--     </a> -->
+        <!--     <a href="./short-news.html" target="_blank"> -->
+        <!--       <button>Ver demo</button> -->
+        <!--     </a> -->
+        <!--   </div>  -->
       </section>
-      <div>
-        <h2 id="hobbies">Hobbies</h2>
-        <ul>
-          <li>Ouvir música</li>
-          <li>Jogar jogos</li>
-          <li>Assistir séries</li>
-          <li>Assistir jogos</li>
-          <li>Linux ricing</li>
-        </ul>
-      </div>
-      <div>
-        <h2 id="projects">Projetos</h2>
-        <div>
+
+      <!-- <section id="about" class="third-section"> -->
+      <!--   <h1>Projetos de destaque</h1> -->
+      <!--   <div class="cards-collection-1"> -->
+      <!--     <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" /> -->
+      <!--     <img -->
+      <!--       class="card-img" -->
+      <!--       src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif" -->
+      <!--     /> -->
+      <!--   </div> -->
+      <!--   <div class="cards-collection-1"> -->
+      <!--     <img -->
+      <!--       class="card-img" -->
+      <!--       src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif" -->
+      <!--     /> -->
+      <!--     <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" /> -->
+      <!--   </div> -->
+      <!-- </section> -->
+
+      <!-- <div> -->
+      <!--   <h2 id="hobbies">Hobbies</h2> -->
+      <!--   <ul> -->
+      <!--     <li>Ouvir música</li> -->
+      <!--     <li>Jogar jogos</li> -->
+      <!--     <li>Assistir séries</li> -->
+      <!--     <li>Assistir jogos</li> -->
+      <!--     <li>Linux ricing</li> -->
+      <!--   </ul> -->
+      <!-- </div> -->
+
+      <section id="contacts" class="forth-section">
+        <!-- <h2>Contato</h2> -->
+        <p data-i18n="form.text1">Quer entrar em contato comigo?</p>
+        <p data-i18n="form.text2">Preencha o formulário abaixo.</p>
+        <form id="my-form">
           <div>
-            <h3>Jogo da velha - React</h3>
-            <img src="assets/opera_pCohNR8ppL.png" style="width: 500px; height: 300px" />
-            <p>
-              Desafio em React completo.
-            </p>
-            <a href="https://github.com/jetchaolin/tic-tac-toe" target="_blank">
-              <button>Repositório</button>
-            </a>
-            <a href="tic-tac-toe.html" target="_blank">
-              <button>Ver demo</button>
-            </a>
-          </div>
-          <div>
-            <h3>Lista de tarefas - Ruby on rails</h3>
-            <img src="assets/Photos_oF3aUUIFLm.png" style="width: 100%; height: 300px" />
-            <p>
-              Meu primeiro projeto em Ruby on rails.
-            </p>
-            <a href="https://github.com/jetchaolin/task_list" target="_blank">
-              <button>Repositório</button>
-            </a>
-            <a href="./task-list.html" target="_blank">
-              <button>Ver demo</button>
-            </a>
-          </div>
-          <div>
-            <h3>Blog - React on Rails</h3>
-            <img src="assets/Photos_AZAGKOnwU6.png" style="width: 100%; height: 300px" />
-            <p>
-              Blog estilo Twitter com React.
-            </p>
-            <a href="https://github.com/jetchaolin/rails_react_app" target="_blank">
-              <button>Repositório</button>
-            </a>
-            <a href="./rails-blog.html" target="_blank">
-              <button>Ver demo</button>
-            </a>
-          </div>
-          <div>
-            <h3>Short News - React on Rails</h3>
-            <img src="assets/Photos_zB7oTWu2vF.png" style="width: 500px; height: 300px" />
-            <p>
-              Projeto de site de notícias.
-            </p>
-            <a href="https://github.com/jetchaolin/short-news" target="_blank">
-              <button>Repositório</button>
-            </a>
-            <a href="./short-news.html" target="_blank">
-              <button>Ver demo</button>
-            </a>
-          </div> 
-        </div>        
-      </div>
-      <div class="page-end">
-        <h2 id="contacts">Contato</h2>
-        <p>Quer entrar em contato comigo?<br> Preencha o formulário abaixo.</p>
-        <form id="myForm">
-          <div>
-            <label for="name">Nome</label>
+            <label for="name" data-i18n="form.name">Nome</label>
             <input type="text" id="name" name="user_name" required />
           </div>
           <div>
@@ -163,26 +246,27 @@
             <input type="email" id="mail" name="user_email" required />
           </div>
           <div>
-            <label for="subject">Assunto</label>
+            <label for="subject" data-i18n="form.subject">Assunto</label>
             <input type="text" id="subject" name="user_subject" required />
           </div>
           <div>
-            <label for="msg">Mensagem</label>
+            <label for="msg" data-i18n="form.msg">Mensagem</label>
             <textarea id="msg" name="user_message" required></textarea>
           </div>
           <div class="button">
-            <button type="submit">Enviar</button>
+            <button type="submit" data-i18n="form.send">Enviar</button>
           </div>
         </form>
-        <a href="#main-title" class="go-up">^</a>
-      </div>
-      <footer>
-        <p>
-          Desenvolvido por João Ramos - 2025
-        </p>
+        <a href="#main" class="go-up"
+          ><span class="material-symbols-outlined"> arrow_drop_up </span></a
+        >
+      </section>
+
+      <footer class="fith-section">
+        <p data-i18n="footer.text">Desenvolvido por João Ramos - 2025</p>
       </footer>
     </div>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="util/i18n.js"></script>
   </body>
-  <script src="app.js"></script>
 </html>
-

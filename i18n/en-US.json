@@ -1,0 +1,19 @@
+{
+  "nav.main-title": "Portfolio",
+  "nav.projects": "Projects",
+  "nav.about": "About",
+  "nav.contact": "Contact",
+  "hero.name": "João Victor",
+  "hero.title": "Hello, my name is ",
+  "hero.subtitle": "I'm fullstack web developer",
+  "hero.skills": "Skills",
+  "hero.text": "Fullstack developer used to Linux environments. I have experience with a wide range of technologies, including Ruby, Ruby on Rails, Java, Spring Boot, JavaScript, React, HTML, CSS, Tailwind CSS, Git, GitHub, SQLite, PostgreSQL, and Docker. In my free time, I enjoy customizing my Linux environment (also known as ricing), from visual appearance to scripts and shortcuts that help improve productivity.",
+  "projects.label": "Project: ",
+  "form.text1": "Interested in contacting me?",
+  "form.text2": "Fill out the form below.",
+  "form.name": "Name",
+  "form.subject": "Subject",
+  "form.msg": "Message",
+  "form.send": "Send",
+  "footer.text": "Developed by João Ramos - 2025"
+}
