@@ -6,14 +6,14 @@ const browserLang = navigator.language.startsWith('pt') ? ['PT', 'pt-BR'] : ['EN
 const storedLang = localStorage.getItem('lang') || browserLang || 'pt-BR';
 // const savedLang = localStorage.getItem('lang') || 'pt-BR';]
  let processedStoredLang = ""
-if (storedLang.length <= 1) {
+if (storedLang.length > 2) {
         processedStoredLang = storedLang.split(',');
 } else {
         processedStoredLang = storedLang;
 }
 
 async function loadLanguage(lang) {
-        const response = await fetch(`/i18n/${lang}.json`);
+        const response = await fetch(`/Portifolio/i18n/${lang}.json`);
         translations = await response.json();
         currentLang = lang;
 }
