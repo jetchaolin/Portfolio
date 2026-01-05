@@ -2,8 +2,8 @@
   --primary-color: #ffffff;
   --secondary-color: #003027;
   --third-color: #00a485;
-  --bg-color: #007f67;
-  --dbg-color: #001511;
+  --primary-bg-color: #007f67;
+  --secondary-bg-color: #001511;
   --b-color: #00000;
   --success-color: #10b981;
   --error-color: #ef4444;
@@ -29,8 +29,8 @@ html {
 body {
   font-family: var(--font-main);
   line-height: 1.6;
-  color: var(--dbg-color);
-  background-color: var(--bg-color);
+  color: var(--secondary-bg-color);
+  background-color: var(--primary-bg-color);
   overflow-x: hidden;
 }
 
@@ -109,7 +109,109 @@ nav ul li a {
 nav ul li a:hover {
   /* background-color: rgba(255, 255, 255, 0.1); */
   color: var(--secondary-color);
-  background-color: var(--bg-color);
+  background-color: var(--primary-bg-color);
+}
+
+select {
+  -webkit-appearance: none; /* For Safari/Chrome */
+  -moz-appearance: none; /* For Firefox (older versions) */
+  appearance: none; /* Standard property */
+
+  outline: none;
+
+  box-shadow: none;
+
+  border: none;
+
+  background-color: var(--primary-bg-color);
+
+  padding: 0;
+  margin: 0;
+}
+
+select:focus {
+  outline: none;
+}
+
+#lang-select {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary-color);
+  padding: 8px; /* Add padding */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#lang-select:hover {
+  background-color: var(--third-color);
+}
+
+#lang-select option {
+  border: 0;
+  border-radius: 5px;
+}
+
+.custom-select {
+  position: relative;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-select:hover {
+  background-color: var(--third-color);
+}
+
+#select-btn {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 8px;
+  color: var(--primary-color);
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--third-color);
+  border: 0px solid #333;
+  border-radius: 8px;
+  display: none;
+}
+
+.options li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.options li:nth-of-type(1):hover {
+  font-weight: 800;
+  color: var(--primary-color);
+  border-radius: 8px 8px 0 0;
+  background: var(--secondary-color);
+}
+
+.options li:nth-of-type(2):hover {
+  font-weight: 800;
+  color: var(--primary-color);
+  border-radius: 0 0 8px 8px;
+  background: var(--secondary-color);
+}
+
+.custom-select.open {
+  border-radius: 8px 8px 0 0;
+  background: var(--third-color);
+}
+
+.custom-select.open #select-btn {
+  color: var(--third-color);
+}
+
+.custom-select.open .options {
+  border-radius: 0 0 8px 8px;
+  display: block;
 }
 
 .line {
@@ -224,7 +326,7 @@ section:first-of-type h1 {
 }
 
 .about-me-3 p {
-  color: var(--dbg-color) !important;
+  color: var(--secondary-bg-color) !important;
   justify-content: left;
   font-size: 18px !important;
 }
@@ -399,13 +501,13 @@ section:first-of-type strong {
 }
 
 .links a:first-child:hover {
-  color: var(--dbg-color);
+  color: var(--secondary-bg-color);
   background-color: var(--primary-color);
 }
 
 /* .links a:nth-child(2) { */
 /*   background-color: var(--primary-color); */
-/*   color: var(--dbg-color); */
+/*   color: var(--secondary-bg-color); */
 /* } */
 
 .links a:last-child {
@@ -417,7 +519,7 @@ section:first-of-type strong {
 
 .links a:last-child:hover {
   color: var(--primary-color);
-  background-color: var(--dbg-color);
+  background-color: var(--secondary-bg-color);
 }
 
 .links a:hover {
@@ -431,15 +533,15 @@ section:first-of-type strong {
   scroll-snap-align: start;
 }
 
-section:nth-of-type(3) {
-  background: var(--primary-color);
-  height: 100vh;
-  /* margin-top: 2rem; */
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* section:nth-of-type(3) { */
+/*   background: var(--primary-color); */
+/*   height: 100vh; */
+/*   /* margin-top: 2rem; */ */
+/*   overflow: hidden; */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   align-items: center; */
+/* } */
 
 .cards-collection-1 {
   display: flex;
@@ -575,7 +677,7 @@ section:nth-of-type(3) {
   height: 90px;
   width: 90px;
   margin-top: 30vh;
-  border: 1px var(--bg-color);
+  border: 1px var(--primary-bg-color);
   border-radius: 70px;
   background-color: rgba(0, 0, 0, 0.622);
   text-align: center;
@@ -583,8 +685,8 @@ section:nth-of-type(3) {
 }
 
 .showcase-btn:hover {
-  color: var(--bg-color);
-  background-color: var(--dbg-color);
+  color: var(--primary-bg-color);
+  background-color: var(--secondary-bg-color);
   box-shadow: var(--shadow-sm);
 }
 
@@ -631,8 +733,8 @@ section:nth-of-type(3) {
 }
 
 #github-btn:hover {
-  color: var(--bg-color);
-  background-color: var(--dbg-color);
+  color: var(--primary-bg-color);
+  background-color: var(--secondary-bg-color);
   box-shadow: var(--shadow-sm);
 }
 
@@ -692,14 +794,14 @@ form textarea {
 }
 
 #my-form button:hover {
-  color: var(--dbg-color);
+  color: var(--secondary-bg-color);
   background: var(--primary-color);
   box-shadow: var(--shadow-sm);
   transform: translateY(0px);
 }
 
 .button button {
-  background: linear-gradient(to right, var(--dbg-color), var(--secondary-color));
+  background: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-color));
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -727,7 +829,7 @@ form textarea {
   color: var(--secondary-color);
   border: 1px hidden;
   border-radius: 70px;
-  background-color: var(--dbg-color);
+  background-color: var(--secondary-bg-color);
   cursor: pointer;
 }
 
@@ -743,7 +845,7 @@ form textarea {
 }
 
 footer {
-  background-color: var(--dbg-color); /* rgb(28, 28, 28); */
+  background-color: var(--secondary-bg-color); /* rgb(28, 28, 28); */
   color: var(--primary-color);
   text-align: center;
   padding: 2rem 0;
@@ -834,7 +936,7 @@ footer p {
     right: 0;
     width: 100%;
     height: 50vh;
-    background: var(--bg-color);
+    background: var(--primary-bg-color);
     transform: translateY(-100%);
     transition: transform 0.3s ease;
     z-index: 100;
@@ -986,7 +1088,7 @@ footer p {
     width: fit-content;
     font-size: 2rem;
     margin: 2rem 0 2rem 0;
-    color: var(--bg-color);
+    color: var(--primary-bg-color);
   }
 
   .skills ul {

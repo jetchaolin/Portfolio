@@ -18,7 +18,7 @@
     <div id="main-container">
       <header>
         <nav>
-          <h1 id="main-title">Portfólio</h1>
+          <h1 id="main-title" data-i18n="nav.main-title">Portfólio</h1>
           <button
             id="menu-hamburguer"
             aria-label="Abrir menu"
@@ -27,12 +27,23 @@
           >
             <span class="hamburger-icon">&#9776;</span>
           </button>
+          <!-- <select id="lang-select"> -->
+          <!--   <option class="drop-down-lang" value="pt-BR">PT</option> -->
+          <!--   <option class="drop-down-lang" value="en-US">EN</option> -->
+          <!-- </select> -->
+          <div class="custom-select">
+            <button id="select-btn">PT</button>
+            <ul class="options">
+              <li data-value="pt-BR">PT</li>
+              <li data-value="en-US">EN</li>
+            </ul>
+          </div>
           <ul id="menu-open" class="menu" aria-hidden="true">
             <!-- <li><a href="#skills">Skills</a></li> -->
             <!-- <li><a href="#hobbies">Hobbies</a></li> -->
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#contacts">Contato</a></li>
+            <li><a href="#projects" data-i18n="nav.projects"></a></li>
+            <!-- <li><a href="#about" data-i18n="nav.about">Sobre</a></li> -->
+            <li><a href="#contacts" data-i18n="nav.contact">Contato</a></li>
             <!-- <li> -->
             <!--   <button id="close-button" class="close" aria-label="Fechar menu" onclick="closeMenu()">X</button> -->
             <!-- </li> -->
@@ -47,9 +58,10 @@
             <img class="me" src="assets/my-pic-light.jpg" />
           </div>
           <div>
-            <h1 class="about-me-1">Olá, meu nome é <br /><strong>João Victor</strong></h1>
+            <h1 class="about-me-1" data-i18n="hero.title">Olá, meu nome é</h1>
+            <h1><strong data-i18n="hero.name">João Victor</strong></h1>
             <div class="about-me-2">
-              <p>Sou desenvolvedor web fullstack.<br /></p>
+              <p data-i18n="hero.subtitle">Sou desenvolvedor web fullstack.<br /></p>
             </div>
             <div class="links">
               <a href="https://www.linkedin.com/in/joão-victor-de-oliveira-ramos/" target="_blank">
@@ -60,7 +72,7 @@
           </div>
         </div>
         <div class="about-me-3">
-          <p>
+          <p data-i18n="hero.text">
             Desenvolvedor Fullstack familiarizado com ambientes Linux. Tenho experiência com
             diversas tecnologias, como Ruby, Ruby on Rails, Java, Spring Boot, JavaScript, React,
             HTML, CSS, Tailwind CSS, Git, GitHub, SQLite, PostgreSQL e Docker. No meu tempo livre,
@@ -69,7 +81,7 @@
           </p>
         </div>
         <div class="skills">
-          <h1>Habilidades</h1>
+          <h1 data-i18n="hero.skills">Habilidades</h1>
           <div class="skills-transparency">
             <div class="skills-track">
               <ul>
@@ -123,7 +135,7 @@
       <section id="projects" class="second-section">
         <div id="showcase">
           <div id="project">
-            <h2 id="project-showcase">Projeto:</h2>
+            <h2 id="project-showcase" data-i18n="projects.label">Projeto:</h2>
             <h3 id="titulo-projeto">Aguardando carregamento...</h3>
             <button id="left-button" class="showcase-btn" type="">
               <span class="material-symbols-outlined"> arrow_back </span>
@@ -131,7 +143,7 @@
             <button id="right-button" class="showcase-btn" type="">
               <span class="material-symbols-outlined"> arrow_forward </span>
             </button>
-	    <button id="github-btn">GitHub</button>
+            <button id="github-btn">GitHub</button>
           </div>
         </div>
 
@@ -191,23 +203,23 @@
         <!--   </div>  -->
       </section>
 
-      <section id="about" class="third-section">
-        <h1>Projetos de destaque</h1>
-        <div class="cards-collection-1">
-          <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" />
-          <img
-            class="card-img"
-            src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif"
-          />
-        </div>
-        <div class="cards-collection-1">
-          <img
-            class="card-img"
-            src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif"
-          />
-          <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" />
-        </div>
-      </section>
+      <!-- <section id="about" class="third-section"> -->
+      <!--   <h1>Projetos de destaque</h1> -->
+      <!--   <div class="cards-collection-1"> -->
+      <!--     <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" /> -->
+      <!--     <img -->
+      <!--       class="card-img" -->
+      <!--       src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif" -->
+      <!--     /> -->
+      <!--   </div> -->
+      <!--   <div class="cards-collection-1"> -->
+      <!--     <img -->
+      <!--       class="card-img" -->
+      <!--       src="assets/placeholder/pessoas-de-negocios-apertando-as-maos-juntas_53876-20488.avif" -->
+      <!--     /> -->
+      <!--     <img class="card-img" src="assets/placeholder/Physics-and-business.jpg" /> -->
+      <!--   </div> -->
+      <!-- </section> -->
 
       <!-- <div> -->
       <!--   <h2 id="hobbies">Hobbies</h2> -->
@@ -222,13 +234,11 @@
 
       <section id="contacts" class="forth-section">
         <!-- <h2>Contato</h2> -->
-        <p>
-          Quer entrar em contato comigo?<br />
-          Preencha o formulário abaixo.
-        </p>
+        <p data-i18n="form.text1">Quer entrar em contato comigo?</p>
+        <p data-i18n="form.text2">Preencha o formulário abaixo.</p>
         <form id="my-form">
           <div>
-            <label for="name">Nome</label>
+            <label for="name" data-i18n="form.name">Nome</label>
             <input type="text" id="name" name="user_name" required />
           </div>
           <div>
@@ -236,15 +246,15 @@
             <input type="email" id="mail" name="user_email" required />
           </div>
           <div>
-            <label for="subject">Assunto</label>
+            <label for="subject" data-i18n="form.subject">Assunto</label>
             <input type="text" id="subject" name="user_subject" required />
           </div>
           <div>
-            <label for="msg">Mensagem</label>
+            <label for="msg" data-i18n="form.msg">Mensagem</label>
             <textarea id="msg" name="user_message" required></textarea>
           </div>
           <div class="button">
-            <button type="submit">Enviar</button>
+            <button type="submit" data-i18n="form.send">Enviar</button>
           </div>
         </form>
         <a href="#main" class="go-up"
@@ -253,9 +263,10 @@
       </section>
 
       <footer class="fith-section">
-        <p>Desenvolvido por João Ramos - 2025</p>
+        <p data-i18n="footer.text">Desenvolvido por João Ramos - 2025</p>
       </footer>
     </div>
     <script type="module" src="app.js"></script>
+    <script type="module" src="util/i18n.js"></script>
   </body>
 </html>

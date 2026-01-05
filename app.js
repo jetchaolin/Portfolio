@@ -7,14 +7,14 @@ const projetos = [];
 
 // VITRINE DE PROJETOS
 const jogoDaVelha = montarProjeto(
-        'Jogo da velha - React',
+        'Tic Tac Toe - React',
         { src: 'assets/tic-tac-toe/Screenshot_08-Dec_13-07-35_15186.png' },
         { href: 'https://github.com/jetchaolin/tic-tac-toe', target: '_blank' },
         { href: 'tic-tac-toe.html', target: '_blank' },
 );
 
 const listaDeTarefas = montarProjeto(
-        'Lista de tarefas - Ruby on rails',
+        'Task list - Ruby on rails',
         { src: 'assets/Photos_oF3aUUIFLm.png' },
         { href: 'https://github.com/jetchaolin/task_list', target: '_blank' },
         { href: './task-list.html', target: '_blank' },
@@ -132,6 +132,14 @@ function closeMenu() {
         menuToggle.setAttribute('aria-expanded', 'false');
         menu.setAttribute('aria-hidden', 'true');
 }
+
+// Lang Selector
+const select = document.querySelector('.custom-select');
+const btn = document.getElementById('select-btn');
+
+btn.addEventListener('click', () => {
+  select.classList.toggle('open');
+});
 
 // FORMULARIO
 document.getElementById('my-form').addEventListener('submit', function (e) {
