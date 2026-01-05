@@ -13,7 +13,7 @@ if (storedLang.length <= 1) {
 }
 
 async function loadLanguage(lang) {
-        const response = await fetch(`/i18n/${lang}.json`);
+        const response = await fetch(`/Portifolio/i18n/${lang}.json`);
         translations = await response.json();
         currentLang = lang;
 }
