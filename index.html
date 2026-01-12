@@ -12,7 +12,7 @@
     <meta name="author" content="João" />
     <title>Portfólio | João Ramos</title>
   </head>
-  <!-- TODO: i18n !!!!!!!!!!!-->
+  <script type="module" src="util/toggle-theme.js"></script>
 
   <body>
     <div id="main-container">
@@ -31,13 +31,6 @@
           <!--   <option class="drop-down-lang" value="pt-BR">PT</option> -->
           <!--   <option class="drop-down-lang" value="en-US">EN</option> -->
           <!-- </select> -->
-          <div class="custom-select">
-            <button id="select-btn">PT</button>
-            <ul class="options">
-              <li data-value="pt-BR">PT</li>
-              <li data-value="en-US">EN</li>
-            </ul>
-          </div>
           <ul id="menu-open" class="menu" aria-hidden="true">
             <!-- <li><a href="#skills">Skills</a></li> -->
             <!-- <li><a href="#hobbies">Hobbies</a></li> -->
@@ -48,6 +41,16 @@
             <!--   <button id="close-button" class="close" aria-label="Fechar menu" onclick="closeMenu()">X</button> -->
             <!-- </li> -->
           </ul>
+          <div id="nav-center">
+            <div class="custom-select">
+              <button id="select-btn">PT</button>
+              <ul class="options">
+                <li data-value="pt-BR">PT</li>
+                <li data-value="en-US">EN</li>
+              </ul>
+            </div>
+            <span id="theme-toggle" class="material-symbols-outlined"> toggle_off </span>
+          </div>
         </nav>
         <hr class="line" />
       </header>
@@ -55,11 +58,11 @@
       <section id="main" class="first-section">
         <div id="main-header">
           <div class="img-wrapper">
-            <img class="me" src="assets/my-pic-light.jpg" />
+            <img class="me" />
           </div>
           <div>
             <h1 class="about-me-1" data-i18n="hero.title">Olá, meu nome é</h1>
-            <h1><strong data-i18n="hero.name">João Victor</strong></h1>
+            <h1 id="name"><strong data-i18n="hero.name">João Victor</strong></h1>
             <div class="about-me-2">
               <p data-i18n="hero.subtitle">Sou desenvolvedor web fullstack.<br /></p>
             </div>

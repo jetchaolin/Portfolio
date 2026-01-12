@@ -41,11 +41,13 @@ const moviesApi = montarProjeto(
 	{ href: ''},
 )
 
-projetos.push(jogoDaVelha);
 projetos.push(listaDeTarefas);
+projetos.push(jogoDaVelha);
 projetos.push(blogRails);
 projetos.push(shortNews);
 projetos.push(moviesApi);
+
+projetos.reverse();
 
 let projetoAtual = 0;
 console.log(projetoAtual);
@@ -213,13 +215,13 @@ const imgObsv = new IntersectionObserver(
         },
 );
 
-document.querySelectorAll('.card').forEach((el) => {
-        imgObsv.observe(el);
-});
-
-document.querySelectorAll('.card-img').forEach((el) => {
-        imgObsv.observe(el);
-});
+// document.querySelectorAll('.card').forEach((el) => {
+//         imgObsv.observe(el);
+// });
+//
+// document.querySelectorAll('.card-img').forEach((el) => {
+//         imgObsv.observe(el);
+// });
 
 document.querySelectorAll('.second-section').forEach((el) => {
         imgObsv.observe(el);
